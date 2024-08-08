@@ -5,7 +5,7 @@ from IndicTransTokenizer.IndicTransTokenizer import IndicTransTokenizer,IndicPro
 BATCH_SIZE = 4
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 quantization = None
-
+ 
 def initialize_model_and_tokenizer(ckpt_dir, direction, quantization):
     print(f"Initializing model and tokenizer for {direction} translation...")
     if quantization == "4-bit":
